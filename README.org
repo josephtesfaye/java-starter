@@ -1,24 +1,6 @@
-Build an executable jar:
+Welcome to java-starter project!
 
-1. Compile the .java files to be included in the jar. Under the project root directory:
-   
-   : cd src
-   : javac com/josephtesfaye/javastarter/*.java
-   
-2. Use the ~jar~ command to create the jar file with an entry point:
+Here you can find all sorts of basic demos and starters for a Java project. Each category of starters resides on their own branch, such as the starter for creating an executable jar being maintained on the "executable-jar" branch. Here's the complete list of starters:
 
-   : jar cfe java-starter.jar com.josephtesfaye.javastarter.Main com/josephtesfaye/javastarter/*.class
-
-3. Run the jar file:
-
-   : java -jar java-starter.jar
-
-Alternatively, you can build the jar without an entry point, and provide the entry point via command line when running it:
-
-1. Build the jar
-   
-   : jar cf java-starter.jar com/josephtesfaye/javastarter/*.class
-
-2. Run the jar
-      
-   : java -cp java-starter.jar com.josephtesfaye.javastarter.Main
+- executable-jar: Starter for creating an executable jar without using third-party libs.
+- executable-jar-maven: Starter for creating an executable jar using Maven.
