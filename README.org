@@ -1,3 +1,5 @@
+This branch ~executable-jar~ stores demo for creating an executable jar using ~jar~ command. Do not delete this branch or it may be hard to return here!
+
 Build an executable jar:
 
 1. Compile the .java files to be included in the jar. Under the project root directory:
