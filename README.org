@@ -2,5 +2,5 @@ Welcome to java-starter project!
 
 Here you can find all sorts of basic demos and starters for a Java project. Each category of starters resides on their own branch, such as the starter for creating an executable jar being maintained on the "executable-jar" branch. Here's the complete list of starters:
 
-- executable-jar: Starter for creating an executable jar without using third-party libs.
-- executable-jar-maven: Starter for creating an executable jar using Maven.
+- ~executable-jar~: Starter for creating an executable jar without using third-party libs.
+- ~executable-jar-maven~: Starter for creating an executable jar using Maven.
