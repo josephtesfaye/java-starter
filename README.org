@@ -1,26 +1,20 @@
 This branch ~executable-jar~ stores demo for creating an executable jar using ~jar~ command. Do not delete this branch or it may be hard to return here!
 
-Build an executable jar:
+To build the executable jar:
 
-1. Compile the .java files to be included in the jar. Under the project root directory:
+1. Compile the source files. Under the project root directory run:
    
    : cd src
    : javac com/josephtesfaye/javastarter/*.java
    
-2. Use the ~jar~ command to create the jar file with an entry point:
+2. Create the jar using the ~jar~ command:
 
    : jar cfe java-starter.jar com.josephtesfaye.javastarter.Main com/josephtesfaye/javastarter/*.class
 
-3. Run the jar file:
+3. Run the jar:
 
    : java -jar java-starter.jar
 
-Alternatively, you can build the jar without an entry point, and provide the entry point via command line when running it:
-
-1. Build the jar
+4. To update the jar, recompile the source files and then update its contents using:
    
-   : jar cf java-starter.jar com/josephtesfaye/javastarter/*.class
-
-2. Run the jar
-      
-   : java -cp java-starter.jar com.josephtesfaye.javastarter.Main
+   : jar uf java-starter.jar com/josephtesfaye/javastarter/Main.class
