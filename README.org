@@ -1,20 +1,5 @@
-This branch ~executable-jar~ stores demo for creating an executable jar using ~jar~ command. Do not delete this branch or it may be hard to return here!
+This branch ~executable-jar-maven-default~ stores a simplest demo for creating an executable jar using Maven. Do not delete this branch or it may be hard to return here!
 
-To build the executable jar:
+To build the executable jar, run ~mvn package~ under project root. A jar named =java-starter-1.0-SNAPSHOT.jar= should be produced in the =target= folder. It doesn't include a main class in its manifest. You can run it with:
 
-1. Compile the source files. Under the project root directory run:
-   
-   : cd src
-   : javac com/josephtesfaye/javastarter/*.java
-   
-2. Create the jar using the ~jar~ command:
-
-   : jar cfe java-starter.jar com.josephtesfaye.javastarter.Main com/josephtesfaye/javastarter/*.class
-
-3. Run the jar:
-
-   : java -jar java-starter.jar
-
-4. To update the jar, recompile the source files and then update its contents using:
-   
-   : jar uf java-starter.jar com/josephtesfaye/javastarter/Main.class
+: java -cp target/java-starter-1.0-SNAPSHOT.jar com.josephtesfaye.javastarter.Main
