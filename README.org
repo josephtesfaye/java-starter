@@ -1,3 +1,8 @@
-This branch ~executable-jar-maven-entrypoint~ stores a simplest demo for creating an executable jar using Maven that includes a main class as its entry point. Do not delete this branch or it may be hard to return here!
+This branch ~executable-jar-maven-libs-outside~ stores a simplest demo for creating an executable jar using Maven that includes a main class as its entry point and third-party libs in a separate directory. Do not delete this branch or it may be hard to return here!
 
-To build the executable jar, run ~mvn package~ under project root. A jar named =java-starter-1.0-SNAPSHOT.jar= should be produced in the =target= folder. Then run it with ~java -jar target/java-starter-1.0-SNAPSHOT.jar~.
+To build the executable jar, run ~mvn package~ under project root. A jar named =java-starter-1.0-SNAPSHOT.jar= should be produced in the =target/package= folder, alongside a =libs= folder containing the dependencies.
+
+Then you can run it with:
+
+: cd target/package
+: java -jar java-starter-1.0-SNAPSHOT.jar
