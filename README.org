@@ -5,3 +5,4 @@ Here you can find all sorts of basic demos and starters for a Java project. Each
 - =executable-jar=: Starter for creating an executable jar without using third-party libs.
 - =executable-jar-maven-default=: Starter for creating an executable jar using Maven in the simplest form.
 - =executable-jar-maven-entrypoint=: Starter for creating an executable jar including an entry point using Maven.
+- =executable-jar-maven-libs-outside=: Starter for creating an executable jar using Maven which includes an entry point in the manifest and dependencies in a separate =libs= folder.
