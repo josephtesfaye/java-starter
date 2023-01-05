@@ -26,42 +26,30 @@
 	  </plugin>
 	  <plugin>
 		<groupId>org.apache.maven.plugins</groupId>
-		<artifactId>maven-jar-plugin</artifactId>
-		<version>2.4</version>
-		<configuration>
-		  <archive>
-			<manifest>
-			  <addClasspath>true</addClasspath>
-			  <classpathPrefix>${classpathPrefix}/</classpathPrefix>
-			  <mainClass>com.josephtesfaye.javastarter.Main</mainClass>
-			</manifest>
-		  </archive>
-		  <outputDirectory>${outputDirectory}</outputDirectory>
-		</configuration>
-	  </plugin>
-	  <plugin>
-		<groupId>org.apache.maven.plugins</groupId>
-		<artifactId>maven-dependency-plugin</artifactId>
+		<artifactId>maven-assembly-plugin</artifactId>
 		<executions>
 		  <execution>
-			<id>copy-dependencies</id>
-			<phase>prepare-package</phase>
+			<phase>package</phase>
 			<goals>
-			  <goal>copy-dependencies</goal>
+			  <goal>single</goal>
 			</goals>
 			<configuration>
-			  <outputDirectory>${outputDirectory}/${classpathPrefix}</outputDirectory>
+			  <archive>
+				<manifest>
+				  <mainClass>com.josephtesfaye.javastarter.Main</mainClass>
+				</manifest>
+			  </archive>
+			  <descriptorRefs>
+				<descriptorRef>jar-with-dependencies</descriptorRef>
+			  </descriptorRefs>
+			  <appendAssemblyId>false</appendAssemblyId>
+			  <finalName>${project.build.finalName}-full</finalName>
 			</configuration>
 		  </execution>
 		</executions>
 	  </plugin>
 	</plugins>
   </build>
-
-  <properties>
-	<outputDirectory>${project.build.directory}/package</outputDirectory>
-	<classpathPrefix>libs</classpathPrefix>
-  </properties>
 
   <dependencies>
 	<dependency>
